@@ -1,3 +1,16 @@
+# IDE settings
+/.idea
+/.project
+/.settings
+*.classpath
+
+# GRADLE
+/gradle
+/.gradle
+
+# Build files
+/build
+
 # Compiled class file
 *.class
 
