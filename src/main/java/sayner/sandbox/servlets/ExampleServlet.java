@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(description = "Сервлет для примера", urlPatterns = { "/ExampleServlet" })
 public class ExampleServlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
     /**

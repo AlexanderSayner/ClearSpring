@@ -11,6 +11,9 @@
 # Build files
 /build
 
+# Spring file
+.springBeans
+
 # Compiled class file
 *.class
 

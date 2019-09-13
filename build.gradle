@@ -7,7 +7,7 @@ group 'sayner.sandbox'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
-targetCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -15,6 +15,8 @@ repositories {
 
 def $servletApiVersion = '4.0.1'
 def $springVersion = '5.1.9.RELEASE'
+def $springSecurityVersion = '5.1.9.RELEASE'
+def $hibernateVersion = '6.0.0.Alpha2'
 
 dependencies {
 
@@ -23,22 +25,41 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: $servletApiVersion
     
+    // https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api
+    implementation group: 'javax.servlet.jsp.jstl', name: 'jstl-api', version: '1.2'
+    
+    
     
     // SPRING
-    
-    // https://mvnrepository.com/artifact/org.springframework/spring-core
-    implementation group: 'org.springframework', name: 'spring-core',    version: $springVersion
-    
-    // https://mvnrepository.com/artifact/org.springframework/spring-context
-    implementation group: 'org.springframework', name: 'spring-context', version: $springVersion
-    
-    // https://mvnrepository.com/artifact/org.springframework/spring-aop
-    implementation group: 'org.springframework', name: 'spring-aop',     version: $springVersion
     
     // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
     implementation group: 'org.springframework', name: 'spring-webmvc',  version: $springVersion
     
-    // https://mvnrepository.com/artifact/org.springframework/spring-web
-    implementation group: 'org.springframework', name: 'spring-web',     version: $springVersion
+    // https://mvnrepository.com/artifact/org.springframework/spring-orm
+    //implementation group: 'org.springframework', name: 'spring-orm',     version: $springVersion
+    
+    // SPRING SECURITY
+    
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-web
+    //implementation group: 'org.springframework.security', name: 'spring-security-web',    version: $springSecurityVersion
+    
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-config
+    //implementation group: 'org.springframework.security', name: 'spring-security-config', version: $springSecurityVersion
+    
+    
+    
+    // JPA
+    
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+    //implementation group: 'org.hibernate.orm', name: 'hibernate-core',   version: $hibernateVersion
+    
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0
+    //implementation group: 'org.hibernate.orm', name: 'hibernate-c3p0',   version: $hibernateVersion
+    
+    // DataBase
+    
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    //implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
+    
     
 }
