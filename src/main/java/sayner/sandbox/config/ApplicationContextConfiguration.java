@@ -10,9 +10,15 @@ import org.springframework.web.servlet.view.JstlView;
 
 import sayner.sandbox.models.HelloWorld;
 
+/**
+ * Простой класс конфигурации контекста
+ * Наследует интерфейс WebMvcConfigurer с базовой настройкой Spring MVC
+ * @author uarchon
+ *
+ */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"sayner.sandbox"})
+@ComponentScan(basePackages= {"sayner.sandbox.context.annotated"})
 public class ApplicationContextConfiguration implements WebMvcConfigurer {
 	
 	// Hello bean

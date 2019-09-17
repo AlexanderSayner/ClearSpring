@@ -1,4 +1,4 @@
-package sayner.sandbox.controllers;
+package sayner.sandbox.context.annotated.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

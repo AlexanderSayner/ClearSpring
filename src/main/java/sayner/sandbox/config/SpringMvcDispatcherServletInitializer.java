@@ -1,27 +1,30 @@
 package sayner.sandbox.config;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 /**
  * Using Servlet 3.x and a Java Application Context
+ * Теоритически можно обойтись без этого класса, 
+ * так как контекст инициализируется в классе WebAppInit implements WebApplicationInitializer,
+ * с которого и начинается весь spring. 
+ * Затем. в нём же прописывается класс с конфигом
+ * 
+ * 
  * @author uarchon
  *
  */
-public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class SpringMvcDispatcherServletInitializer{}/* extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-    	
-        // TODO Auto-generated method stub
-        return null;
+
+    	return new Class[]{
+                ApplicationContextConfiguration.class
+        };      
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
     	
-        return new Class[]{
-                ApplicationContextConfiguration.class
-        };
+    	return null;
     }
 
     @Override
@@ -32,4 +35,4 @@ public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationCon
         };
     }
 
-}
+}*/
