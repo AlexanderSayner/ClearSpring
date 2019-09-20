@@ -18,7 +18,7 @@ public class WebAppInit implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 
-		// Объевление контекста
+		// Объявление контекста 
 		XmlWebApplicationContext xmlContext = new XmlWebApplicationContext();
 
 		// Указать файл с конфигурацией контекста
