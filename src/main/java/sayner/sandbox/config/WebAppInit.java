@@ -10,6 +10,8 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import sayner.sandbox.context.annotated.config.HibernateConfig;
+
 /*
  * Конфигурирует контекст приложения, запускает Dispetcher Servlet
  */
@@ -18,11 +20,11 @@ public class WebAppInit implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 
-		// Объявление контекста 
+		// Объявление контекста
 		XmlWebApplicationContext xmlContext = new XmlWebApplicationContext();
 
 		// Указать файл с конфигурацией контекста
-		xmlContext.setConfigLocation("/WEB-INF/application-context.xml");
+		xmlContext.setConfigLocation("classpath*:application-context.xml");
 
 		// Finally, we create a ContextLoaderListener with the root context and register
 		// it
@@ -44,7 +46,7 @@ public class WebAppInit implements WebApplicationInitializer {
 		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
 
 		// Registers annotated configurations class
-		applicationContext.register(ApplicationContextConfiguration.class);
+		applicationContext.register(ApplicationContextConfiguration.class, HibernateConfig.class);
 
 		// Зачем это делать, когда есть аннотация @ComponentScan в подключённом строчкой
 		// выше классе с конфигом

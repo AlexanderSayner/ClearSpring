@@ -37,7 +37,7 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-webmvc',  version: $springVersion
     
     // https://mvnrepository.com/artifact/org.springframework/spring-orm
-    //implementation group: 'org.springframework', name: 'spring-orm',     version: $springVersion
+    implementation group: 'org.springframework', name: 'spring-orm',     version: $springVersion
     
     // SPRING SECURITY
     
@@ -52,15 +52,19 @@ dependencies {
     // JPA
     
     // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
-    //implementation group: 'org.hibernate.orm', name: 'hibernate-core',   version: $hibernateVersion
+    implementation group: 'org.hibernate.orm', name: 'hibernate-core',   version: $hibernateVersion
     
     // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0
     //implementation group: 'org.hibernate.orm', name: 'hibernate-c3p0',   version: $hibernateVersion
     
+    // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.1.0.Alpha6'
+    
+    
     // DataBase
     
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
-    //implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
     
     
 }
