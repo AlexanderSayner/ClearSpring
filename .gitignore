@@ -1,11 +1,8 @@
 # IDE settings
-/.idea
+/.idea/*
 /.project
-/.settings
+/.settings/*
 *.classpath
-.idea
-.project
-.settings
 
 # GRADLE
 /gradle
