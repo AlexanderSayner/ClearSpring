@@ -9,22 +9,6 @@ package sayner.sandbox.models;
  */
 public class MusicPlayer {
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getVolume() {
-		return this.volume;
-	}
-
-	public void setVolume(int volume) {
-		this.volume = volume;
-	}
-
 	// Любой жанр
 	private Music music;
 	
@@ -44,6 +28,10 @@ public class MusicPlayer {
 		this.music = music;
 	}
 
+	/*
+	 * getter'ы & setter'ы 
+	 */
+	
 	/**
 	 * 
 	 * @param music
@@ -51,6 +39,22 @@ public class MusicPlayer {
 	public void setMusic(Music music) {
 
 		this.music = music;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getVolume() {
+		return this.volume;
+	}
+
+	public void setVolume(int volume) {
+		this.volume = volume;
 	}
 
 	/**

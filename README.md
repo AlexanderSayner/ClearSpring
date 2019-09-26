@@ -1,13 +1,24 @@
 # ClearSpring
 Java EE application example with Spring 5 MVC
 
+database.properties используется в HibernateConfig
+HibernateConfig подключён к WebAppInit в контексте с аннотациями
+
+Сущности из sayner.sandbox.models могут использоваться одновременно двумя контекстами.
+
+Сканирование spring компонентов в контексте с аннотациями прописано по пути "sayner.sandbox.context.annotated". То есть, внутри этого пакета спринг будет создавать бины с соответствующими аннотациями.
+Сканирование компонентов спрингом в xml контексте прописано в application-context.xml по пути "sayner.sandbox.context.xml". Благодаря этому бины там можно создавать с помощью аннотации @Component, а не в том же xml файле. Но это будет работать только в "sayner.sandbox.context.xml". 
+
+
 List of permissions, application needed to start:
 
 Just copy it and paste in the end of file /PATH-TO-JDK/lib/security/default.policy
 Tested on OpenJDK, version 11.0.2
 
 // permissions needed by applications using java.desktop module
+
 grant {
+
     permission java.lang.RuntimePermission "accessClassInPackage.com.sun.beans";
     permission java.lang.RuntimePermission "accessClassInPackage.com.sun.beans.*";
     permission java.lang.RuntimePermission "accessClassInPackage.com.sun.java.swing.plaf.*";
