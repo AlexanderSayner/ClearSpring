@@ -3,6 +3,9 @@
 /.project
 /.settings
 *.classpath
+.idea
+.project
+.settings
 
 # GRADLE
 /gradle
