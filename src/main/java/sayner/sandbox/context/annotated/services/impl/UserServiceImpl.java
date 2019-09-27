@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import sayner.sandbox.context.annotated.dao.UserDao;
 import sayner.sandbox.context.annotated.services.UserService;
-import sayner.sandbox.models.CustomUser;
+import sayner.sandbox.models.impl.CustomUser;
 
 /**
  * @author uarchon

@@ -1,4 +1,4 @@
-package sayner.sandbox.models;
+package sayner.sandbox.models.impl;
 
 public class HelloWorld {
 

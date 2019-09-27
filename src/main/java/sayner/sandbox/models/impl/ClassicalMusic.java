@@ -24,6 +24,7 @@ public class ClassicalMusic implements Music {
 	 * @return
 	 */
 	public static ClassicalMusic getClassicalMusic() {
+		
 		return new ClassicalMusic();
 	}
 

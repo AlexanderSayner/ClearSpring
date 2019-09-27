@@ -1,7 +1,9 @@
 /**
  * 
  */
-package sayner.sandbox.models;
+package sayner.sandbox.models.impl;
+
+import sayner.sandbox.models.Music;
 
 /**
  * @author uarchon

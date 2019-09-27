@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sayner.sandbox.models;
+package sayner.sandbox.models.impl;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

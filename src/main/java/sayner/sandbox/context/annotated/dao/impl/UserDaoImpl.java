@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import sayner.sandbox.context.annotated.dao.UserDao;
-import sayner.sandbox.models.CustomUser;
+import sayner.sandbox.models.impl.CustomUser;
 
 /**
  * @author uarchon

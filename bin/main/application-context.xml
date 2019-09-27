@@ -31,7 +31,7 @@
 	</bean>
 
 	<bean id="musicPlayerBean"
-		class="sayner.sandbox.models.MusicPlayer" scope="prototype">
+		class="sayner.sandbox.models.impl.MusicPlayer" scope="prototype">
 
 		<property name="music" ref="musicBean" />
 		<property name="name" value="${musicPlayer.name}" />
